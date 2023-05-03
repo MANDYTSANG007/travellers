@@ -1,0 +1,4 @@
+.card-content {
+    max-height: 5em;
+    overflow-y: auto;
+}
