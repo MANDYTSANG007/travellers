@@ -23,14 +23,12 @@ const Input = ({ name, handleChange, autoFocus, type, handleShowPassword, label,
                             {type === "password" ? <Visibility /> : <VisibilityOff />}
                         </IconButton>
                     </InputAdornment>
-                )
-            }: null 
-        }
+                ),
+            }: null }
           >
-
           </TextField>
       </Grid>
   )
 }
 
-export default Input
+export default Input;

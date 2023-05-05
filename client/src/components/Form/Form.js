@@ -7,9 +7,11 @@ import "./Form.css";
 
 
 const Form = ({ currentId, setCurrentId }) => {
-    const [postData, setPostData] = useState({ creator: "", title: "", message: "", tags: "", selectedFile: "" });
+    const [postData, setPostData] = useState({ title: "", message: "", tags: "", selectedFile: "" });
     const post = useSelector((state) => (currentId ? state.posts.find((p) => p._id === currentId) : null));
     const dispatch = useDispatch();
+    const user = JSON.parse(localStorage.getItem('profile'));
+
 
     useEffect(() => {
         if(post) setPostData(post);
@@ -18,35 +20,34 @@ const Form = ({ currentId, setCurrentId }) => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         if (currentId === 0) {
-            dispatch(createPost(postData));
+            dispatch(createPost({ ...postData, name: user?.userObject?.name }));
             clear();
           } else {
-            dispatch(updatePost(currentId, postData));
+            dispatch(updatePost(currentId, { ...postData, name: user?.userObject?.name }));
             clear();
           }
     }
 
+    if(!user?.userObject?.name) {
+        return (
+            <Paper sx={{marginTop: "5%"}}>
+                <Typography variant="h6" align="center">
+                    Please sign in to add your post.
+                </Typography>
+            </Paper>
+        )
+    };
+
     const clear = () => {
         setCurrentId(0);
-        setPostData ({ creator: "", title: "", message: "", tags: "", selectedFile: "" });
+        setPostData ({ title: "", message: "", tags: "", selectedFile: "" });
     }
 
     return (
-        // <Paper sx={{ marginTop:"5%" }}>
         <Paper sx={{ marginTop:"4%", padding: "2rem" }}> 
 
             <form autoComplete="off" noValidate onSubmit={handleSubmit}>
                 <Typography  align="center" variant="h6"> {currentId ? 'Editing' : 'Creating' } a Travel Destination </Typography>
-
-                <TextField 
-                    name="creator" 
-                    sx={{ mt: 1, mb: 2}} 
-                    variant="outlined" 
-                    label="Creator" 
-                    fullWidth 
-                    value={postData.creator} 
-                    onChange={(e) => setPostData({ ...postData, creator: e.target.value })}>
-                </TextField>
                 <TextField 
                     name="title" 
                     sx={{ mt: 1, mb: 2}} 

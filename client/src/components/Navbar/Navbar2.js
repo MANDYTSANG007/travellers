@@ -7,6 +7,8 @@ import decode from 'jwt-decode';
 import logo from '../../assets/images/logo-travellers.png';
 
 
+
+
 const Navbar = () => {
     // const user = null;
     //Get user profile here using localstorage
@@ -35,7 +37,6 @@ const Navbar = () => {
     
         setUser(JSON.parse(localStorage.getItem('profile')));
       }, [location]);
-
 
     return (
         <AppBar position="static" color="inherit">
