@@ -31,8 +31,16 @@ const Form = ({ currentId, setCurrentId }) => {
     if(!user?.userObject?.name) {
         return (
             <Paper sx={{marginTop: "5%"}}>
-                <Typography variant="h6" align="center">
-                    Please sign in to add your post.
+                <Typography 
+                    variant="h6" 
+                    align="center" 
+                    sx={{fontFamily: 'monospace',
+                        fontWeight: 700,
+                        // letterSpacing: '.3rem'
+                        }}
+                >
+                    Welcome to TRAVELLERS, where wanderlust and adventure seekers can come together to share their experiences from around the globe. Whether you're a seasoned traveller or just starting your journey, this site is the perfect platform to connect and share!
+                    <br /> <br /> Please sign in to add your post.
                 </Typography>
             </Paper>
         )
