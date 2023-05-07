@@ -1,5 +1,4 @@
 # MERN Stack Travellers App
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
@@ -15,6 +14,7 @@ This is a full-stack web application built with the MERN stack (MongoDB, Express
 - [Preview](#preview)
 - [Installation](#installation)
 - [Future Development](#future-development)
+- [Author](#author)
 - [License](#license)
 
 
@@ -46,11 +46,20 @@ This is a full-stack web application built with the MERN stack (MongoDB, Express
 Here is a screenshot of the app's landing page:
 <img src="./client/src/assets/images/travellers-landing-page.png">
 
+
+
+
 Here is a GIF to showcase creating a post:
 <img src="./client/src/assets/images/create-post.gif">
 
+
+
+
 Here is a GIF to showcase deleting a post:
 <img src="./client/src/assets/images/delete-post.gif">
+
+
+
 
 Here is a GIF to showcase liking a post:
 <img src="./client/src/assets/images/like-post.gif">
