@@ -34,7 +34,7 @@ const Post = ({ post, setCurrentId }) => {
     };
 
     return (
-        <Card sx={{ mt: "5%", height: "30rem" }}>
+        <Card sx={{ mt: "5%", height: "28rem" }}>
             <div style={{ position: "relative" }}>
                 <CardMedia sx={{ height: "15rem" }} image={post.selectedFile} title={post.selectedFile} />
                 <Typography style={{ position: "absolute", top: 0, left: 0, padding: "1rem" }} variant="h6" sx={{ color: "white" }}>

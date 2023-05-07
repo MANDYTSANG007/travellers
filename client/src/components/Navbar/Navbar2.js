@@ -65,7 +65,7 @@ const Navbar = () => {
                     </Box>
 
                     {user ? (
-                        <Box>
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
                             <Avatar sx={{ mr: 1 }} alt={user.userObject.name} src={user.userObject.imageUrl}>{user.userObject.name.charAt(0)}</Avatar>
                             <Typography variant="h6">{user.userObject.name}</Typography>
                             <Button variant="contained" color="secondary" sx={{ ml: 5 }} onClick={logout}>Logout</Button>
