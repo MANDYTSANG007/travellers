@@ -44,25 +44,16 @@ This is a full-stack web application built with the MERN stack (MongoDB, Express
 ## Preview
 
 Here is a screenshot of the app's landing page:
-<img src="./client/src/assets/images/travellers-landing-page.png">
-
-
-
+<img src="./client/src/assets/images/travellers-landing-page.png" style="margin-bottom: 20px">
 
 Here is a GIF to showcase creating a post:
-<img src="./client/src/assets/images/create-post.gif">
-
-
-
+<img src="./client/src/assets/images/create-post.gif" style="margin-bottom: 20px"> 
 
 Here is a GIF to showcase deleting a post:
-<img src="./client/src/assets/images/delete-post.gif">
-
-
-
+<img src="./client/src/assets/images/delete-post.gif" style="margin-bottom: 20px">
 
 Here is a GIF to showcase liking a post:
-<img src="./client/src/assets/images/like-post.gif">
+<img src="./client/src/assets/images/like-post.gif" style="margin-bottom: 20px"> 
 
 
 ## Installation
