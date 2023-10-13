@@ -21,12 +21,9 @@ export const signin = async (req, res) => {
             return res.status(400).json({ message: "Invalid credentials" });
         }
         const credential = jwt.sign({ email: existingUser.email, id: existingUser._id}, SECRET, {expiresIn: '1h' });
-        console.log('user.js-jwt-Token(credential):', credential);
         res.setHeader('Set-Cookie', 'mycookie=value; SameSite=Strict');
 
         res.status(200).json({ userObject: existingUser, credential });
-        // res.status(200).json({ message: "Sign in successful." });
-
 
     } catch (error){
         res.status(500).json({ message: "something went wrong."});

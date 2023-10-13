@@ -3,13 +3,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-// do something and then move to the next thing
 const auth = async (req, res, next) => {
     const SECRET = process.env.JWT_SECRET;
 
     try {
-        // check if the user's credential is correct.
-        // console.log(req.headers);
+        // Check if the user's credential is correct.
         const credential = req.headers.authorization.split(" ")[1];
         const isCustomAuth = credential.length < 500;
 
