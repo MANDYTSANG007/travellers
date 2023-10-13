@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 const API = axios.create({ baseURL: 'http://localhost:5000' })
-// const url = "http://localhost:5000/posts";
 
 // Sending token back to the backend to check using middleware
 API.interceptors.request.use((req) => {

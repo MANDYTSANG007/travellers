@@ -9,27 +9,18 @@ import Auth from "./components/Auth/Auth";
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import { getClientId } from './config';
 
-
 const App = () => {
     const [clientId, setClientId] = useState('');
 
     useEffect(() => {
         getClientId()
             .then(res => {
-                console.log('App.js-received response:', res);
-                console.log('App.js-received response data:', res.data);
                 setClientId(res);
-                console.log('App.js-Received clientId from backend:', res.data.clientId);
-                console.log('App.js-Received clientId from backend:', res);
             })
             .catch(error => {
                 console.log('App.js-Error fetching client id - ', error);
             })
     }, []);
-
-
-    console.log('App.js-rendering with clientId:', clientId);
-
 
     return (
         <GoogleOAuthProvider clientId={clientId}>

@@ -1,4 +1,3 @@
-// import React, { useState, useEffect, useCallback } from 'react';
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AppBar, Typography, Toolbar, Button, Avatar } from '@mui/material'
@@ -8,8 +7,7 @@ import logo from '../../assets/images/logo-travellers.png';
 
 
 const Navbar = () => {
-    // const user = null;
-    //Get user profile here using localstorage
+    //Get user profile here using local storage
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
     console.log(user);
     const dispatch = useDispatch();

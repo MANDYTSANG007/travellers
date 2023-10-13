@@ -4,17 +4,9 @@
     justify-content: center;
     align-items: center;
     height: 10rem;
+    margin-top: 5rem;
+    box-shadow: 0px -5px 3px rgba(50, 50, 50, 0.2);
 }
-
-/* .footer-logo {
-    height: 5em;
-    width: 5em;
-    margin-bottom: 0.5em;
-} */
-
-/* .footer .footer-logo:hover {
-    cursor: pointer;
-} */
 
 .footer-copyright {
     font-size: 12px;
@@ -23,8 +15,8 @@
     font-weight: 400;
 }
 
-/* Mobile Phone */
-@media only screen and (max-width: 480px) {
+/* For mobile devices */
+@media only screen and (max-width: 600px) {
     .footer-logo {
         width: 3em;
         height: 3em;
@@ -35,8 +27,8 @@
     }
 }
 
-/* Tablets */
-@media only screen and (min-width: 481px) and (max-width: 768px) {
+/* For tablets and smaller laptops with screens between 600px and 1024px */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
     .footer-logo {
         width: 4em;
         height: 4em;
